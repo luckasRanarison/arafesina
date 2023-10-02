@@ -5,7 +5,7 @@ arafesina::arafesina! {
     lefa fotony() -> Valiny<(), Vata<dinamika Fahadisoana>> {
         atao za = Olona::vaovao("Olona".atao_azo(), Tsisy);
 
-        za.miharaba();
+        za.miarahaba();
 
         atao manana_fanampiny = mampitahy za.fanampiny {
             Misy(_) => marina,
@@ -42,12 +42,12 @@ arafesina::arafesina! {
         }
     }
 
-    fitsipika Miharaba {
-        lefa miharaba(&tena);
+    fitsipika Miarahaba {
+        lefa miarahaba(&tena);
     }
 
-    fampiharana Miharaba hoan_ny Olona {
-        lefa miharaba(&tena) {
+    fampiharana Miarahaba hoan_ny Olona {
+        lefa miarahaba(&tena) {
             manoratra!("Manahoana ny tany! {} ny anarako", tena.anarana);
         }
     }
