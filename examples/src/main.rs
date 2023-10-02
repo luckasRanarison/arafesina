@@ -1,85 +1,72 @@
-rouille::rouille! {
-    externe cagette rouille;
+arafesina::arafesina! {
+    ivelany baoritra arafesina;
+    mampiasa std::fahadisoana::Fahadisoana;
 
-    utilisons std::collections::Dictionnaire comme Dico;
+    lefa fotony() -> Valiny<(), Vata<dinamika Fahadisoana>> {
+        atao za = Olona::vaovao("Olona".atao_azo(), Tsisy);
 
-    convention CléValeur {
-        fonction écrire(&soi, clé: Chaîne, valeur: Chaîne);
-        fonction lire(&soi, clé: Chaîne) -> Résultat<PeutÊtre<&Chaîne>, Chaîne>;
+        za.miharaba();
+
+        atao manana_fanampiny = mampitahy za.fanampiny {
+            Misy(_) => marina,
+            Tsisy => diso,
+        }; // na mampiasa raha_misy()
+
+        raha manana_fanampiny {
+            zavatra!();
+        }
+
+        atao miova lisitra = Lisitra::vaovao();
+
+        lisitra.ampiana(1);
+        lisitra.ampiana(2);
+        lisitra.ampiana(3);
+
+        hoan_ny zavatra anaty lisitra {
+            manoratra!("{}", zavatra);
+        }
+
+        manoratra!("{:?}", ankasa_ve(2));
+
+        Mety(())
     }
 
-    statique mutable DICTIONNAIRE: PeutÊtre<Dico<Chaîne, Chaîne>> = Rien;
+    rafitra Olona {
+        anarana: Fatorana,
+        fanampiny: Arakaraka<Fatorana>
+    }
 
-    structure Concrète;
-
-    réalisation CléValeur pour Concrète {
-        fonction écrire(&soi, clé: Chaîne, valeur: Chaîne) {
-            soit dico = dangereux {
-                DICTIONNAIRE.prendre_ou_insérer_avec(Défaut::défaut)
-            };
-            dico.insérer(clé, valeur);
+    fampiharana Olona {
+        daholobe lefa vaovao(anarana: Fatorana, fanampiny: Arakaraka<Fatorana>) -> Tena {
+            Tena { anarana, fanampiny }
         }
-        fonction lire(&soi, clé: Chaîne) -> Résultat<PeutÊtre<&Chaîne>, Chaîne> {
-            si soit Quelque(dico) = dangereux { DICTIONNAIRE.en_réf() } {
-                Bien(dico.lire(&clé))
-            } sinon {
-                Arf("fetchez le dico".vers())
+    }
+
+    fitsipika Miharaba {
+        lefa miharaba(&tena);
+    }
+
+    fampiharana Miharaba hoan_ny Olona {
+        lefa miharaba(&tena) {
+            manoratra!("Manahoana ny tany! {} ny anarako", tena.anarana);
+        }
+    }
+
+    lefa ankasa_ve(n: u32) -> fahamarinana {
+        lefa ankasa(n: u32) -> fahamarinana {
+            raha n == 0 {
+                mamerina marina;
             }
+            tsiankasa(n - 1)
         }
-    }
 
-    public(cagette) fonction peut_etre(i: u32) -> PeutÊtre<Résultat<u32, Chaîne>> {
-        si i % 2 == 1 {
-            si i == 42 {
-                Quelque(Arf(Chaîne::depuis("merde")))
-            } sinon {
-                Quelque(Bien(33))
+        lefa tsiankasa(n: u32) -> fahamarinana {
+            raha n == 0 {
+                mamerina diso;
             }
-        } sinon {
-            Rien
-        }
-    }
-
-    asynchrone fonction exemple() {
-    }
-
-    asynchrone fonction exemple2() {
-        exemple().attend;
-    }
-
-    fonction principale() {
-        soit mutable x = 31;
-
-        selon x {
-            42 => {
-                affiche!("omelette du fromage")
-            }
-            _ => affiche!("voila")
+            ankasa(n - 1)
         }
 
-        pour i de 0..10 {
-            soit val = boucle {
-                arrête i;
-            };
-
-            tant que x < val {
-                x += 1;
-            }
-
-            x = si soit Quelque(resultat) = peut_etre(i) {
-                resultat.déballer()
-            } sinon {
-                12
-            };
-        }
-
-        //secondaire();
-    }
-
-    #[légal(code_inaccessible)]
-    fonction secondaire() {
-        merde!("oh non"); // for the true French experience
-        calisse!("tabernacle"); // for friends speaking fr-ca
-        oups!("fetchez la vache"); // in SFW contexts
+        ankasa(n)
     }
 }

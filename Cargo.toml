@@ -1,5 +1,2 @@
 [workspace]
-members = [
-    "rouille_proc_macro",
-    "examples"
-]
+members = ["arafesina_proc_macro", "examples"]
