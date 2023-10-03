@@ -2,8 +2,7 @@
 
 ![Logo](https://github.com/luckasRanarison/nvimrc/assets/101930730/e47f31d9-e79e-45ac-8837-86522f0f6ede)
 
-Aren't you _reraka_ from writing Rust programs in English? Do you like saying
-"letie" a lot? Would you like to try something different, in an exotic and
+Aren't you _reraka_ from writing Rust programs in English? Would you like to try something different, in an exotic and
 funny-sounding language? Would you want to bring some Malagasy touch to your
 programs?
 
