@@ -60,7 +60,7 @@ syntax. Zay fotsiny.
 
 First of all, _misaotra betsaka_ for considering participating to this joke, the
 Malagasy government will thank you later! Feel free to throw in a few identifiers
-here and there, and open a pull-request against the `fotony` (French for
+here and there, and open a pull-request against the `fotony` (Malagasy for
 `main`) branch.
 
 Please don't introduce swear words, though: we will not excuse your Malagasy.
