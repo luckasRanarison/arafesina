@@ -75,6 +75,7 @@ Please don't introduce swear words, though: we will not excuse your Malagasy.
 
 ## Other languages
 
+- French: [rouille](https://github.com/bnjbvr/rouille)
 - Dutch: [roest](https://github.com/jeroenhd/roest)
 - German: [rost](https://github.com/michidk/rost)
 - Polish: [rdza](https://github.com/phaux/rdza)
